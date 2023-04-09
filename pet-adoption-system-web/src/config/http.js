@@ -1,42 +1,37 @@
 import axios from "axios";
-import router from "./router.js"
-
-const instance = axios.create({
-    baseURL:"http://localhost:8000",
-    headers:{
-        "Content-Type": "application/json",
+import useLogin from "../stores/LoginStore"
+import NProgress from "nprogress";
+const http = axios.create({
+    baseURL: 'http://localhost/api',
+    timeout: 5000,
+    headers: {
+        'Content-Type': 'application/json;charset=UTF-8'
     }
-});
-
-instance.interceptors.request.use(config=>{
-    if (sessionStorage.getItem('hm-token')){
-        config.headers['hm-token'] = sessionStorage.getItem('hm-token')
-    }
-    return config
 })
 
-instance.interceptors.response.use(response=> {
-    return new Promise((resolve, reject) => {
-        if (response.status === 200) {
-            if (response.data.code === 0) {
-                resolve(response.data)
-                return;
-            }
-        }
-        reject(response.data)
-    });
-},error => {
-    if (error.response?.status === 400){
-        if (error.response.data.code === 10001){
-            router.push({name: 'login'})
-        }
+http.interceptors.request.use(config=>{
+    NProgress.start()
+    // TODO: 添加token
+    const loginInfo  = useLogin();
+    if(loginInfo.isLogin()){
+        // 将token添加到请求头中
+        config.headers['hm-token'] = loginInfo.token;
     }
-    return Promise.reject(error.response?.data||error.message)
+    return config;
+},error=>{
+    return Promise.reject(error)
 })
 
-const put = instance.put
-const post = instance.post
-const get = instance.get
-const del = instance.delete
-export {put,post,get,del}
-export default instance
+http.interceptors.response.use(response=>{
+    return new Promise((resolve,reject)=>{
+        NProgress.done()
+        if(response.data.code === 200){
+            resolve(response.data)
+        }else{
+            reject(response.data)
+        }
+    })
+})
+
+
+export default http
