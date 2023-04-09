@@ -1,6 +1,7 @@
 package cn.jasonone.sevice.impl;
 
 import cn.hutool.core.util.RandomUtil;
+import cn.hutool.crypto.digest.MD5;
 import cn.jasonone.bean.UserInfo;
 import cn.jasonone.mapper.UserInfoMapper;
 import cn.jasonone.sevice.UserInfoService;
@@ -21,6 +22,21 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     @Override
     public UserInfo login(UserInfo userInfo) {
+        UserInfoMapper mapper = sqlSession.getMapper(UserInfoMapper.class);
+        UserInfo user = mapper.findByUsername(userInfo.getUsername());
+        if(user != null){
+            // 获得盐
+            String salt = user.getSalt();
+            // 加盐加密
+            String password = salt+userInfo.getPassword()+salt;
+            password = MD5.create().digestHex(password);
+            // 验证密码
+            if(password.equals(user.getPassword())){
+                user.setPassword(null);
+                user.setSalt(null);
+                return user;
+            }
+        }
         return null;
     }
 }
