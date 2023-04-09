@@ -26,12 +26,12 @@
 </template>
 
 <script setup>
-import {reactive, ref} from "vue";
+import { ref} from "vue";
 import {register} from "./api.js";
 import router from "../../config/router.js";
 import {layer} from "@layui/layui-vue";
 
-const userInfo = reactive({
+const userInfo = ref({
   username: "",
   password:"",
   checkPassword:"",
@@ -41,11 +41,13 @@ const userInfo = reactive({
 
 const labelPosition = ref('right');
 
-function onRegister(e){
-  register(userInfo).then(res=>{
-    router.push('/login')
+function onRegister(){
+  console.log(userInfo.value)
+  register(userInfo.value).then(res=>{
+    layer.msg(res.msg)
   }).catch(err=>{
-    layer.msg(err.msg)
+    console.log(err.message)
+    layer.msg('注册失败')
   })
 }
 function login(){
