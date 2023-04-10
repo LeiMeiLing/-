@@ -1,4 +1,4 @@
-package cn.jasonone.sevice.impl;
+package cn.jasonone.service.impl;
 
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.crypto.digest.MD5;

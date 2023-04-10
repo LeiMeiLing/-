@@ -1,4 +1,4 @@
-package cn.jasonone.sevice;
+package cn.jasonone.service;
 
 import cn.jasonone.bean.UserInfo;
 import org.apache.ibatis.session.SqlSession;
