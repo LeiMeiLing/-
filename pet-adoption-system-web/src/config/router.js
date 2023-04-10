@@ -14,7 +14,18 @@ const routes=[
             {
                 path:'/userInfo',
                 name:'userInfo',
-                component:()=>import('../views/petInfo/Index.vue')
+                component:()=>import('../views/userManagement/Index.vue')
+            },
+            {
+                path: '/petInfo',
+                name:'petInfo',
+                component:()=>import('../views/petManagement/index.vue')
+            }
+            ,
+            {
+                path: '/adoptInfo',
+                name:'adoptInfo',
+                component:()=>import('../views/adoptManagement/index.vue')
             }
         ]
     }
@@ -25,16 +36,16 @@ const router=createRouter({
     routes
 })
 
-router.beforeEach((to,from)=>{
-    const token=sessionStorage.getItem('hm-token')
-    if(!token){
-        //判断要去哪里
-        if(to.name === 'login' || to.name === 'register'){
-            return true
-        }
-        //如果没有登录跳转到登录页
-        return {name:'login'}
-    }
-})
+// router.beforeEach((to,from)=>{
+//     const token=sessionStorage.getItem('hm-token')
+//     if(!token){
+//         //判断要去哪里
+//         if(to.name === 'login' || to.name === 'register'){
+//             return true
+//         }
+//         //如果没有登录跳转到登录页
+//         return {name:'login'}
+//     }
+// })
 
 export default router

@@ -1,7 +1,6 @@
 <template>
  <div class="container">
    <lay-row space="10">
-
    <lay-row space="10">
      <lay-col md="7">
        <lay-input placeholder="请输入用户名" v-model="query.userName">
@@ -9,8 +8,8 @@
        </lay-input>
      </lay-col>
      <lay-col md="7">
-       <lay-input placeholder="请输入昵称" v-model="query.nickName">
-         <template #prepend>昵称</template>
+       <lay-input placeholder="请输入电话" v-model="query.phoneNumb">
+         <template #prepend>电话</template>
        </lay-input>
      </lay-col>
      <lay-col md="7">
@@ -90,8 +89,8 @@
        </lay-form-item>
      </lay-form>
      <lay-form>
-       <lay-form-item label="昵称">
-         <lay-input v-model="userInfoAdd.nickName" placeholder="请输入昵称"></lay-input>
+       <lay-form-item label="电话">
+         <lay-input v-model="userInfoAdd.phoneNumb" placeholder="请输入电话"></lay-input>
        </lay-form-item>
        <lay-form-item>
          <lay-button type="normal" @click="onAdd ">新增</lay-button>
@@ -117,8 +116,8 @@ const columns=reactive([
     width: 80,
     align: "center"
   },{
-    title: '昵称',
-    key:"nickName",
+    title: '电话',
+    key:"phoneNumb",
     width: 80,
     align: "center"
   },
@@ -149,7 +148,7 @@ const userInfoAdd=reactive({
   usrName:'',
   password:'',
   email:'',
-  nickName:''
+  phoneNumb:''
 })
 function onAdd(){
   add(userInfoAdd).then(()=>{

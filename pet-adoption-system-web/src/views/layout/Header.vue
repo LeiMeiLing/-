@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <h1 class="title">学生管理系统</h1>
+    <h1 class="title">宠物领养系统</h1>
     <lay-dropdown>
       <lay-button border="green">
         <div class="avatar"></div>

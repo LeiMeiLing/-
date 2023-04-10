@@ -5,9 +5,10 @@
         系统管理
       </template>
       <lay-menu-item id="user-manager" to="/userInfo">用户管理</lay-menu-item>
-      <lay-menu-item id="role-manager">角色管理</lay-menu-item>
-      <lay-menu-item id="permission-manager">权限管理</lay-menu-item>
-      <lay-menu-item id="image-manager" to="/home/avatar">图片管理</lay-menu-item>
+      <lay-menu-item id="role-manager" to="/petInfo">宠物管理</lay-menu-item>
+      <lay-menu-item id="permission-manager">商城管理</lay-menu-item>
+      <lay-menu-item id="image-manager" to="/home/avatar">评论管理</lay-menu-item>
+      <lay-menu-item id="image-manager" to="/adoptInfo">领养管理</lay-menu-item>
     </lay-sub-menu>
   </lay-menu>
 </template>
