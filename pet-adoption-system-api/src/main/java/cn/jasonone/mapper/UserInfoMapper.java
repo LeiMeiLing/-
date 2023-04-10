@@ -12,7 +12,7 @@ public interface UserInfoMapper {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(UserInfo userInfo);
+    int insert(UserInfo record);
 
     int insertSelective(UserInfo record);
 
@@ -23,4 +23,5 @@ public interface UserInfoMapper {
 
     int updateByPrimaryKey(UserInfo record);
 
+    UserInfo findByUsername(String username);
 }

@@ -14,9 +14,9 @@
     <context-param>
         <param-name>login_exclude</param-name>
         <param-value>
-            /user/login
-            /user/register
-            /user/verifyCode
+            /userInfo/login
+            /userInfo/register
+            /userInfo/verifyCode
         </param-value>
     </context-param>
 </web-app>

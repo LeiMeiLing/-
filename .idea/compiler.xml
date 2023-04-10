@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pet-adoption-system-api" />
+        <module name="leve2-project-api" />
       </profile>
     </annotationProcessing>
   </component>
