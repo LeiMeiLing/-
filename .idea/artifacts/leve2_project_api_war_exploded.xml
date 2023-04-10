@@ -13,6 +13,17 @@
         <element id="directory" name="classes">
           <element id="module-output" name="leve2-project-api" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.26" />
+          <element id="library" level="project" name="Maven: com.mysql:mysql-connector-j:8.0.32" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.21.9" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.13" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.10.1" />
+          <element id="library" level="project" name="Maven: cn.hutool:hutool-all:5.8.16" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:4.6" />
+          <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.3.2" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/pet-adoption-system-api/target/leve2-project-api-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
