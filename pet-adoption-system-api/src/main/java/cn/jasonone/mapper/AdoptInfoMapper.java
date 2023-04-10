@@ -3,9 +3,9 @@ package cn.jasonone.mapper;
 import cn.jasonone.bean.AdoptInfo;
 
 /**
-* @author Mrli
+* @author miss
 * @description 针对表【adopt_info(领养信息表)】的数据库操作Mapper
-* @createDate 2023-04-10 09:59:50
+* @createDate 2023-04-09 15:56:50
 * @Entity cn.jasonone.bean.AdoptInfo
 */
 public interface AdoptInfoMapper {

@@ -11,5 +11,8 @@
         <module name="leve2-project-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="leve2-project-api" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

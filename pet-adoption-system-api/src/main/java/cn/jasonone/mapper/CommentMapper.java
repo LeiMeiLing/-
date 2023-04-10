@@ -3,9 +3,9 @@ package cn.jasonone.mapper;
 import cn.jasonone.bean.Comment;
 
 /**
-* @author Mrli
+* @author miss
 * @description 针对表【comment】的数据库操作Mapper
-* @createDate 2023-04-10 09:59:49
+* @createDate 2023-04-09 15:56:50
 * @Entity cn.jasonone.bean.Comment
 */
 public interface CommentMapper {

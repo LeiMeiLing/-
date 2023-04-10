@@ -26,9 +26,6 @@
         from pet_info
         where  pet_id = #{petId,jdbcType=INTEGER} 
     </select>
-    <select id="selectAll" resultType="cn.jasonone.bean.PetInfo">
-        select * from pet_info
-    </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
         delete from pet_info
