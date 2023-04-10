@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/pet-adoption-system-web.iml" filepath="$PROJECT_DIR$/pet-adoption-system-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hm-2.iml" filepath="$PROJECT_DIR$/hm-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pet-adoption-system-api/leve2-project-api.iml" filepath="$PROJECT_DIR$/pet-adoption-system-api/leve2-project-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pet-adoption-system-web/pet-adoption-system-web.iml" filepath="$PROJECT_DIR$/pet-adoption-system-web/pet-adoption-system-web.iml" />
     </modules>
   </component>
 </project>

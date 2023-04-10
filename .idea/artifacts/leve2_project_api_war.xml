@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="leve2-project-api:war">
+    <output-path>$PROJECT_DIR$/pet-adoption-system-api/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>leve2-project-api</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="leve2-project-api-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="leve2-project-api:war exploded" />
+    </root>
+  </artifact>
+</component>
