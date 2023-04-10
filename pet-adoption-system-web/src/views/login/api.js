@@ -1,14 +1,15 @@
-import {post} from "../../config/http.js"
-
-/**
- * 登录
- * @param userName 用户名
- * @param password 密码
- * @returns {Promise<unknown>}
- */
-export const login = ({userName,password})=>{
-    return post('/user/login',{userName,password})
-        .then(rs=>{
-            sessionStorage.setItem('hm-token',rs.data.token)
+import useLogin from '../../stores/LoginStore'
+import http from "../../config/http.js";
+export function login(userInfo){
+    return http.post("/user/login",userInfo)
+        .then(res=>{
+            if(res.code === 200){
+                const loginInfo = useLogin();
+                // 保存token
+                loginInfo.setToken(res.token);
+                // 保存用户信息
+                loginInfo.setUserInfo(res.userInfo);
+            }
+            return res;
         })
 }
