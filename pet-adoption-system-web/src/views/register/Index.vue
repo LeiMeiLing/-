@@ -45,13 +45,13 @@ function onRegister(){
   console.log(userInfo.value)
   register(userInfo.value).then(res=>{
     layer.msg(res.msg)
+    router.push('/login')
   }).catch(err=>{
-    console.log(err.message)
-    layer.msg('注册失败')
+    layer.msg(err.msg)
   })
 }
 function login(){
-  router.push('/login')
+   router.push('/login')
 }
 </script>
 
