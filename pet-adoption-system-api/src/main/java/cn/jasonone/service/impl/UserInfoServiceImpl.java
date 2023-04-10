@@ -4,7 +4,7 @@ import cn.hutool.core.util.RandomUtil;
 import cn.hutool.crypto.digest.MD5;
 import cn.jasonone.bean.UserInfo;
 import cn.jasonone.mapper.UserInfoMapper;
-import cn.jasonone.sevice.UserInfoService;
+import cn.jasonone.service.UserInfoService;
 import lombok.Setter;
 import org.apache.ibatis.session.SqlSession;
 

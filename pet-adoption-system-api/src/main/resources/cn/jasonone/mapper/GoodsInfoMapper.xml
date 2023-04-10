@@ -19,7 +19,7 @@
 
     <sql id="Base_Column_List">
         id,user_id,goodsname,
-        img,price,desc,
+        img,price,
         status,create_time,update_time
     </sql>
 
@@ -31,7 +31,7 @@
     </select>
     <select id="selectAll" resultType="cn.jasonone.bean.GoodsInfo">
         select
-        *
+        <include refid="Base_Column_List" />
         from goods_info
     </select>
 

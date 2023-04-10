@@ -2,6 +2,8 @@ package cn.jasonone.mapper;
 
 import cn.jasonone.bean.PetInfo;
 
+import java.util.List;
+
 /**
 * @author miss
 * @description 针对表【pet_info(宠物信息表)】的数据库操作Mapper
@@ -9,6 +11,11 @@ import cn.jasonone.bean.PetInfo;
 * @Entity cn.jasonone.bean.PetInfo
 */
 public interface PetInfoMapper {
+    /**
+     * 查询所有宠物
+     * @return
+     */
+    List<PetInfo> selectAll();
 
     int deleteByPrimaryKey(Long id);
 

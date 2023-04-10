@@ -1,10 +1,9 @@
-package cn.jasonone.sevice;
+package cn.jasonone.service;
 
 import cn.jasonone.bean.GoodsInfo;
 import com.github.pagehelper.PageInfo;
 
-import java.util.List;
-
 public interface GoodsInfoService {
-    PageInfo<GoodsInfo> selectAll(int pageNum, int pageSize);
+    //查询所有并分页
+    PageInfo<GoodsInfo> findAll(int pageNum, int pageSize);
 }

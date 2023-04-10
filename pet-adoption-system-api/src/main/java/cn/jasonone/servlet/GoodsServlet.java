@@ -3,9 +3,8 @@ package cn.jasonone.servlet;
 import cn.jasonone.bean.GoodsInfo;
 import com.github.pagehelper.PageInfo;
 import com.google.gson.Gson;
-import cn.jasonone.sevice.GoodsInfoService;
-import cn.jasonone.sevice.impl.GoodsInfoServiceImpl;
-import com.google.gson.Gson;
+import cn.jasonone.service.GoodsInfoService;
+import cn.jasonone.service.impl.GoodsInfoServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,10 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static java.lang.System.out;
-
 @WebServlet("/petstore")
-public class goodsServlet extends HttpServlet {
+public class GoodsServlet extends HttpServlet {
     GoodsInfoService gs = new GoodsInfoServiceImpl();
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

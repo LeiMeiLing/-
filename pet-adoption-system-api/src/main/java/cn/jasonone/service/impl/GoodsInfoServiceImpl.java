@@ -1,8 +1,8 @@
-package cn.jasonone.sevice.impl;
+package cn.jasonone.service.impl;
 
 import cn.jasonone.bean.GoodsInfo;
 import cn.jasonone.mapper.GoodsInfoMapper;
-import cn.jasonone.sevice.GoodsInfoService;
+import cn.jasonone.service.GoodsInfoService;
 import cn.jasonone.util.MyBatisUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
